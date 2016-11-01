@@ -4,89 +4,64 @@
 
 <html>
 <head>
-<title>Introduction</title>
+<title>简介</title>
 <link href="csug.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <a name="g0"></a>
 <a name="./intro:h0"></a>
 
-<h1>Chapter 1. Introduction</h1>
+<h1>Chapter 1. 简介</h1>
 
 
 
 
 
 <p>
-<i>Chez&nbsp;Scheme</i> is an implementation of the Revised<sup>6</sup> Report on
-Scheme&nbsp;[<a class=citation href="./bibliography.html#g173">27</a>] (R6RS) with numerous language and programming environment
-extensions.
+<i>Chez&nbsp;Scheme</i>是一种有着众多的语言和编程环境扩展的“Revised<sup>6</sup> Report on Scheme&nbsp;[<a class=citation href="./bibliography.html#g173">27</a>] (R6RS)”实现。
 
 <p>
-This book describes these extensions in detail.
-It contains as well a concise summary of standard and <i>Chez&nbsp;Scheme</i> forms 
-and procedures, which gives the syntax of each form and the number and
-types of arguments accepted by each procedure.
-Details on standard Scheme features can be found in
-<a name="./intro:s0"></a><a  href=http://www.scheme.com/tspl4/><i>The
-Scheme Programming Language, 4th Edition</i></a> (TSPL4)&nbsp;[<a class=citation href="./bibliography.html#g157">11</a>] or
-the Revised<sup>6</sup> Report on Scheme.
-<i>The Scheme Programming Language, 4th Edition</i> also contains an
-extensive introduction to the Scheme language and numerous short and
-extended examples.
+本书详细描述了这些扩展。
+亦包含了标准的和<i>Chez&nbsp;Scheme</i>的形式与过程的简明摘要，给出了每个形式和每个过程所接受的参数的数量和类型的语法。
+标准Scheme特性的详细内容可参考<a name="./intro:s0"></a><a  href=http://www.scheme.com/tspl4/><i>The
+Scheme Programming Language, 4th Edition</i></a> (TSPL4)&nbsp;[<a class=citation href="./bibliography.html#g157">11</a>]或者the Revised<sup>6</sup> Report on Scheme.
+<i>The Scheme Programming Language, 4th Edition</i>也包含了一个关于Scheme语言的广泛的介绍和众多长长短短的例子。
 
 <p>
-Most of this document also applies equally to <a name="./intro:s1"></a><i>Petite&nbsp;Chez&nbsp;Scheme</i>,
-which is fully compatible with the complete <i>Chez&nbsp;Scheme</i> system but uses
-a high-speed interpreter in place of <i>Chez&nbsp;Scheme</i>'s
-incremental native-code compiler.
-Programs written for <i>Chez&nbsp;Scheme</i> run unchanged in
-<i>Petite&nbsp;Chez&nbsp;Scheme</i> as long as they do not require the
-compiler to be invoked.
-In fact, <i>Petite&nbsp;Chez&nbsp;Scheme</i> is built from the same sources as
-<i>Chez&nbsp;Scheme</i>, with all but the compiler sources included.
-A detailed discussion of the impact of this distinction appears in
-Section&nbsp;<a href="./use.html#g13">2.8</a>.
+本文档大部分内容也适用于<a name="./intro:s1"></a><i>Petite&nbsp;Chez&nbsp;Scheme</i>（与完整版Chez Scheme系统完全兼容，但其使用了一个高速解释器替代了增量本地编译器）。
+为<i>Chez&nbsp;Scheme</i>写的程序只要不调用编译器的话，那么无需修改就能在<i>Petite&nbsp;Chez&nbsp;Scheme</i>中运行，
+事实上，<i>Petite&nbsp;Chez&nbsp;Scheme</i>编译自与<i>Chez&nbsp;Scheme</i>相同的代码，仅仅除去了与编译器相关的代码。
+该区别造成的影响的详细讨论参见Section&nbsp;<a href="./use.html#g13">2.8</a>.
 
 <p>
-The remainder of this chapter covers
-<i>Chez&nbsp;Scheme</i> extensions to Scheme syntax (Section&nbsp;<a href="./intro.html#g1">1.1</a>),
-notational conventions used in this book (Section&nbsp;<a href="./intro.html#g2">1.2</a>),
-the use of parameters for system customization (Section&nbsp;<a href="./intro.html#g3">1.3</a>),
-and where to look for more information on
-<i>Chez&nbsp;Scheme</i> (Section&nbsp;<a href="./intro.html#g4">1.4</a>).
+本章的其余部分将介绍<i>Chez&nbsp;Scheme</i>对Scheme语法的拓展(Section&nbsp;<a href="./intro.html#g1">1.1</a>)，本书中使用的符号约定(Section&nbsp;<a href="./intro.html#g2">1.2</a>)，用于系统自定义的参数用法(Section&nbsp;<a href="./intro.html#g3">1.3</a>)，与如何查找与<i>Chez&nbsp;Scheme</i>相关的更多信息(Section&nbsp;<a href="./intro.html#g4">1.4</a>).
 
 <p>
-Chapter&nbsp;<a href="./use.html#g5">2</a> describes how one uses <i>Chez&nbsp;Scheme</i>
-for program development, scripting, and application delivery, plus
-how to get the compiler to generate the most efficient code
-possible.
-Chapter&nbsp;<a href="./debug.html#g15">3</a> describes debugging and object inspection
-facilities.
-Chapter&nbsp;<a href="./foreign.html#g22">4</a> documents facilities for interacting with
-separate processes or code written in other languages.
-Chapter&nbsp;<a href="./binding.html#g36">5</a> describes binding forms.
-Chapter&nbsp;<a href="./control.html#g42">6</a> documents control structures.
-Chapter&nbsp;<a href="./objects.html#g47">7</a> documents operations on nonnumeric objects,
-while Chapter&nbsp;<a href="./numeric.html#g62">8</a> documents various numeric operations,
+Chapter&nbsp;<a href="./use.html#g5">2</a> 描述了如何使用<i>Chez&nbsp;Scheme</i>来进行程序开发、脚本、应用交付，以及如何使编译器生成最高效的代码。
+Chapter&nbsp;<a href="./debug.html#g15">3</a> 描述了调试和对象检查功能（//object inspection facilities）。
+Chapter&nbsp;<a href="./foreign.html#g22">4</a> 陈述了与不同处理器或其他语言代码交互的facilities。
+Chapter&nbsp;<a href="./binding.html#g36">5</a> 描述了绑定表格。
+Chapter&nbsp;<a href="./control.html#g42">6</a> 陈述了控制结构。
+Chapter&nbsp;<a href="./objects.html#g47">7</a> 陈述了对非数字对象的操作。
+Chapter&nbsp;<a href="./numeric.html#g62">8</a> 陈述了各种对数字的操作，包括 various numeric operations,
 including efficient type-specific operations.
-Chapter&nbsp;<a href="./io.html#g70">9</a> describes input/output operations and
+Chapter&nbsp;<a href="./io.html#g70">9</a> 描述了 input/output operations and
 generic ports, which allow the definition of ports with arbitrary
 input/output semantics.
 Chapter&nbsp;<a href="./libraries.html#g88">10</a> discusses how R6RS libraries and top-level
 programs are loaded into <i>Chez&nbsp;Scheme</i> along with various features for
 controlling and tracking the loading process.
-Chapter&nbsp;<a href="./syntax.html#g95">11</a> describes syntactic extension and modules.
-Chapter&nbsp;<a href="./system.html#g107">12</a> describes system operations, such as operations
+Chapter&nbsp;<a href="./syntax.html#g95">11</a> 描述了 syntactic extension and modules.
+Chapter&nbsp;<a href="./system.html#g107">12</a> 描述了 system operations, such as operations
 for interacting with the operating system and customizing
 <i>Chez&nbsp;Scheme</i>'s user interface.
-Chapter&nbsp;<a href="./smgmt.html#g124">13</a> describes how to invoke and control the storage
+Chapter&nbsp;<a href="./smgmt.html#g124">13</a> 描述了 how to invoke and control the storage
 management system and documents guardians and weak pairs.
-Chapter&nbsp;<a href="./expeditor.html#g128">14</a> describes <i>Chez&nbsp;Scheme</i>'s expression
+Chapter&nbsp;<a href="./expeditor.html#g128">14</a> 描述了 <i>Chez&nbsp;Scheme</i>'s expression
 editor and how it can be customized.
-Chapter&nbsp;<a href="./threads.html#g133">15</a> documents the procedures and syntactic forms
+Chapter&nbsp;<a href="./threads.html#g133">15</a> 陈述了 the procedures and syntactic forms
 that comprise the interface to <i>Chez&nbsp;Scheme</i>'s native thread system.
-Finally, Chapter&nbsp;<a href="./compat.html#g142">16</a> describes various compatibility features.
+Finally, Chapter&nbsp;<a href="./compat.html#g142">16</a> 描述了 various compatibility features.
 
 <p>
 The back of this book contains a bibliography, 
