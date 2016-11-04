@@ -4,64 +4,64 @@
 
 <html>
 <head>
-<title>���</title>
+<title>简介</title>
 <link href="csug.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <a name="g0"></a>
 <a name="./intro:h0"></a>
 
-<h1>Chapter 1. ���</h1>
+<h1>Chapter 1. 简介</h1>
 
 
 
 
 
 <p>
-<i>Chez&nbsp;Scheme</i>��һ�������ڶ�����Ժͱ�̻�����չ�ġ�Revised<sup>6</sup> Report on Scheme&nbsp;[<a class=citation href="./bibliography.html#g173">27</a>] (R6RS)��ʵ�֡�
+<i>Chez&nbsp;Scheme</i>是一种有着众多的语言和编程环境扩展的“Revised<sup>6</sup> Report on Scheme&nbsp;[<a class=citation href="./bibliography.html#g173">27</a>] (R6RS)”实现。
 
 <p>
-������ϸ��������Щ��չ��
-������˱�׼�ĺ�<i>Chez&nbsp;Scheme</i>����ʽ����̵ļ���ժҪ��������ÿ����ʽ��ÿ�����������ܵĲ��������������͵��﷨��
-��׼Scheme���Ե���ϸ���ݿɲο�<a name="./intro:s0"></a><a  href=http://www.scheme.com/tspl4/><i>The
-Scheme Programming Language, 4th Edition</i></a> (TSPL4)&nbsp;[<a class=citation href="./bibliography.html#g157">11</a>]����the Revised<sup>6</sup> Report on Scheme.
-<i>The Scheme Programming Language, 4th Edition</i>Ҳ������һ������Scheme���ԵĹ㷺�Ľ��ܺ��ڶ೤���̶̵����ӡ�
+本书详细描述了这些扩展。
+亦包含了标准的和<i>Chez&nbsp;Scheme</i>的形式与过程的简明摘要，给出了每个形式和每个过程所接受的参数的数量和类型的语法。
+标准Scheme特性的详细内容可参考<a name="./intro:s0"></a><a  href=http://www.scheme.com/tspl4/><i>The
+Scheme Programming Language, 4th Edition</i></a> (TSPL4)&nbsp;[<a class=citation href="./bibliography.html#g157">11</a>]或者the Revised<sup>6</sup> Report on Scheme.
+<i>The Scheme Programming Language, 4th Edition</i>也包含了一个关于Scheme语言的广泛的介绍和众多长长短短的例子。
 
 <p>
-���ĵ��󲿷�����Ҳ������<a name="./intro:s1"></a><i>Petite&nbsp;Chez&nbsp;Scheme</i>����������Chez Schemeϵͳ��ȫ���ݣ�����ʹ����һ�����ٽ�����������������ر���������
-Ϊ<i>Chez&nbsp;Scheme</i>д�ĳ���ֻҪ�����ñ������Ļ�����ô�����޸ľ�����<i>Petite&nbsp;Chez&nbsp;Scheme</i>�����У�
-��ʵ�ϣ�<i>Petite&nbsp;Chez&nbsp;Scheme</i>��������<i>Chez&nbsp;Scheme</i>��ͬ�Ĵ��룬������ȥ�����������صĴ��롣
-��������ɵ�Ӱ�����ϸ���۲μ�Section&nbsp;<a href="./use.html#g13">2.8</a>.
+本文档大部分内容也适用于<a name="./intro:s1"></a><i>Petite&nbsp;Chez&nbsp;Scheme</i>（与完整版Chez Scheme系统完全兼容，但其使用了一个高速解释器替代了增量本地编译器）。
+为<i>Chez&nbsp;Scheme</i>写的程序只要不调用编译器的话，那么无需修改就能在<i>Petite&nbsp;Chez&nbsp;Scheme</i>中运行，
+事实上，<i>Petite&nbsp;Chez&nbsp;Scheme</i>编译自与<i>Chez&nbsp;Scheme</i>相同的代码，仅仅除去了与编译器相关的代码。
+该区别造成的影响的详细讨论参见Section&nbsp;<a href="./use.html#g13">2.8</a>.
 
 <p>
-���µ����ಿ�ֽ�����<i>Chez&nbsp;Scheme</i>��Scheme�﷨����չ(Section&nbsp;<a href="./intro.html#g1">1.1</a>)��������ʹ�õķ���Լ��(Section&nbsp;<a href="./intro.html#g2">1.2</a>)������ϵͳ�Զ���Ĳ����÷�(Section&nbsp;<a href="./intro.html#g3">1.3</a>)������β�����<i>Chez&nbsp;Scheme</i>��صĸ�����Ϣ(Section&nbsp;<a href="./intro.html#g4">1.4</a>).
+本章的其余部分将介绍<i>Chez&nbsp;Scheme</i>对Scheme语法的拓展(Section&nbsp;<a href="./intro.html#g1">1.1</a>)，本书中使用的符号约定(Section&nbsp;<a href="./intro.html#g2">1.2</a>)，用于系统自定义的参数用法(Section&nbsp;<a href="./intro.html#g3">1.3</a>)，与如何查找与<i>Chez&nbsp;Scheme</i>相关的更多信息(Section&nbsp;<a href="./intro.html#g4">1.4</a>).
 
-<p>Chapter&nbsp;<a href="./use.html#g5">2</a> ���������ʹ��<i>Chez&nbsp;Scheme</i>�����г��򿪷����ű���Ӧ�ý������Լ����ʹ�������������Ч�Ĵ��롣
-<br/>Chapter&nbsp;<a href="./debug.html#g15">3</a> �����˵��ԺͶ����鹦�ܣ�//object inspection facilities����
-<br/>Chapter&nbsp;<a href="./foreign.html#g22">4</a> �������벻ͬ���������������Դ��뽻����facilities��
-<br/>Chapter&nbsp;<a href="./binding.html#g36">5</a> �����˰󶨱���
-<br/>Chapter&nbsp;<a href="./control.html#g42">6</a> �����˿��ƽṹ��
-<br/>Chapter&nbsp;<a href="./objects.html#g47">7</a> �����˶Է����ֶ���Ĳ�����
-<br/>Chapter&nbsp;<a href="./numeric.html#g62">8</a> �����˸��ֶ����ֵĲ����������������ֲ�������Ч���ض����Ͳ�����
-<br/>Chapter&nbsp;<a href="./io.html#g70">9</a> ����������/����������������������������/��������ͨ�ö˿ڡ�
-<br/>Chapter&nbsp;<a href="./libraries.html#g88">10</a> ��������ν�R6RS��Ͷ��������ص�<i>Chez&nbsp;Scheme</i>�Լ����ƺ͸��ټ��ع��̵ĸ��ֹ��ܡ�
-<br/>Chapter&nbsp;<a href="./syntax.html#g95">11</a> �������﷨��չ��ģ�顣
-<br/>Chapter&nbsp;<a href="./system.html#g107">12</a> ������ϵͳ���������������ϵͳ�����Ͷ���<i>Chez&nbsp;Scheme</i>���û�����Ĳ�����
-<br/>Chapter&nbsp;<a href="./smgmt.html#g124">13</a> ��������ε��úͿ��ƴ洢����ϵͳ����¼�໤�˺����ԡ���//documents guardians and weak pairs.��
-<br/>Chapter&nbsp;<a href="./expeditor.html#g128">14</a> ������<i>Chez&nbsp;Scheme</i>�ı���ʽ�༭���Լ���ζ��䶨�ơ�
-<br/>Chapter&nbsp;<a href="./threads.html#g133">15</a> �����˰���<i>Chez&nbsp;Scheme</i>�ı����߳�ϵͳ�ӿڵĹ��̺��﷨��ʽ��
-<br/>Chapter&nbsp;<a href="./compat.html#g142">16</a> �����˸��ּ����Թ��ܡ�
-
-<p>
-����ĺ�������˲ο���Ŀ���﷨��ʽժҪ����������
-���﷨��ʽժҪ���ֵ�ҳ���Լ��������г��ֵ�б��ҳ��ָ�����﷨��ʽ�͹��̱���ʽ�������ı��е�λ��
-�﷨��ʽժҪ����������������TSPL4����Ŀ���ʶ���������������<i>Chez&nbsp;Scheme</i>�Ĺ��ܡ�
-TSPL4����Ŀ��һ����t����ĸΪҳ��ǰ׺��Ϊ��ǡ�
-<p>
-�����TSPL4�����߰汾�Ϳ�����ɲμ�<a  href=http://www.scheme.com>www.scheme.com</a>.
+<p>Chapter&nbsp;<a href="./use.html#g5">2</a> 描述了如何使用<i>Chez&nbsp;Scheme</i>来进行程序开发、脚本、应用交付，以及如何使编译器生成最高效的代码。
+<br/>Chapter&nbsp;<a href="./debug.html#g15">3</a> 描述了调试和对象检查功能（//object inspection facilities）。
+<br/>Chapter&nbsp;<a href="./foreign.html#g22">4</a> 陈述了与不同处理器或其他语言代码交互的facilities。
+<br/>Chapter&nbsp;<a href="./binding.html#g36">5</a> 描述了绑定表格。
+<br/>Chapter&nbsp;<a href="./control.html#g42">6</a> 陈述了控制结构。
+<br/>Chapter&nbsp;<a href="./objects.html#g47">7</a> 陈述了对非数字对象的操作。
+<br/>Chapter&nbsp;<a href="./numeric.html#g62">8</a> 陈述了各种对数字的操作，包括各种数字操作、高效的特定类型操作。
+<br/>Chapter&nbsp;<a href="./io.html#g70">9</a> 描述了输入/输出操作和允许定义具有任意输入/输出语义的通用端口。
+<br/>Chapter&nbsp;<a href="./libraries.html#g88">10</a> 讨论了如何将R6RS库和顶层程序加载到<i>Chez&nbsp;Scheme</i>以及控制和跟踪加载过程的各种功能。
+<br/>Chapter&nbsp;<a href="./syntax.html#g95">11</a> 描述了语法扩展和模块。
+<br/>Chapter&nbsp;<a href="./system.html#g107">12</a> 描述了系统操作，例如与操作系统交互和定制<i>Chez&nbsp;Scheme</i>的用户界面的操作。
+<br/>Chapter&nbsp;<a href="./smgmt.html#g124">13</a> 描述了如何调用和控制存储管理系统并记录监护人和弱对。（//documents guardians and weak pairs.）
+<br/>Chapter&nbsp;<a href="./expeditor.html#g128">14</a> 描述了<i>Chez&nbsp;Scheme</i>的表达式编辑器以及如何对其定制。
+<br/>Chapter&nbsp;<a href="./threads.html#g133">15</a> 陈述了包括<i>Chez&nbsp;Scheme</i>的本地线程系统接口的过程和语法形式。
+<br/>Chapter&nbsp;<a href="./compat.html#g142">16</a> 描述了各种兼容性功能。
 
 <p>
-<p><i>��л:</i>
+本书的后面包含了参考书目，语法形式摘要，和索引。
+在语法形式摘要出现的页码以及在索引中出现的斜体页码指明了语法形式和过程被正式定义在文本中的位置
+语法形式摘要和索引包含了来自TSPL4的条目，故而它们完整覆盖了<i>Chez&nbsp;Scheme</i>的功能。
+TSPL4的条目以一个“t”字母为页码前缀作为标记。
+<p>
+本书和TSPL4的在线版本和勘误表可参见<a  href=http://www.scheme.com>www.scheme.com</a>.
+
+<p>
+<p><i>致谢:</i>
 Michael Adams, Mike Ashley, Carl Bruggeman, Bob Burger, Sam
 Daniel, George Davidson, Aziz Ghuloum, Bob Hieb, Andy Keep, and Oscar Waddell have
 contributed substantially to the development of <i>Chez&nbsp;Scheme</i>.
@@ -86,38 +86,38 @@ book are welcome.
 
 
 <p>
-<i>Chez&nbsp;Scheme</i>ͬʱ�ڶ���(���ݣ�//datum��)������﷨��ʽ������չ��Scheme���﷨��
-�ڶ�����棬<i>Chez&nbsp;Scheme</i>֧�ְ����Ǳ�׼�ַ����Ը������Ϳ�ѧ����������ķ�ʮ�������֡���ʽ���ȵ������������ͻ�״�ṹ��records��boxes�ȵȵķ��ŵĶ����ʾ����
-��Щ��չ��������������
-�﷨��ʽ�������չ���������ᴩ���飬���ҽ��ܽ��ڱ���ĺ�����﷨��ʽժҪ�С�
+<i>Chez&nbsp;Scheme</i>同时在对象(数据（//datum）)层面和语法形式层面拓展了Scheme的语法。
+在对象层面，<i>Chez&nbsp;Scheme</i>支持包含非标准字符、以浮点数和科学计数法表达的非十进制数字、显式长度的向量、共享和环状结构、records，boxes等等的符号的额外表示法。
+这些扩展将在下面描述。
+语法形式层面的拓展的描述将贯穿本书，并且将总结在本书的后面的语法形式摘要中。
 
 <p>
-<i>Chez&nbsp;Scheme</i>�Զ��ַ�ʽ��չ�˱�ʶ�����﷨��
-���ȣ��齨��ʶ�����ֵ��ַ����п��������֡���㡢�Ӻš�����Ϊ��ͷ��ֻҪ���岻������Ϊһ�����֡�
-���磬<tt>0abc</tt>, <tt>+++</tt>, and <tt>..</tt>��<i>Chez&nbsp;Scheme</i>�ж�����Ч�ı�ʶ����
-�ڶ��㣬���ַ�����<tt>&#123;</tt>��<tt>&#125;</tt>Ҳ�Ǳ�ʶ����
-�����㣬���������ַ��ı�ʶ��������ʹ��<tt>\</tt>��<tt>|</tt>��ʹ��ת���ַ��ķ�ʽ��ӡ��
-<tt>\</tt>����ת�嵥���ַ������ˡ�x������Ϊ<tt>\x</tt>���ڱ��һ��ʮ�����Ʊ���ֵ�Ŀ�ʼ����
-��<tt>|</tt>����ת���|��ʼ��|�������м����ַ����顣
-����<tt>\||\|</tt>��һ�����������ַ��ı�ʶ��������һ���ַ�<tt>|</tt>���һ���ַ�<tt>\</tt>��ɣ���<tt>|hit&nbsp;me!|</tt>����һ��������һ���ո��ַ��ı�ʶ����
+<i>Chez&nbsp;Scheme</i>以多种方式拓展了标识符的语法。
+首先，组建标识符名字的字符序列可以以数字、句点、加号、减号为开头，只要整体不被解析为一个数字。
+例如，<tt>0abc</tt>, <tt>+++</tt>, and <tt>..</tt>在<i>Chez&nbsp;Scheme</i>中都是有效的标识符。
+第二点，单字符序列<tt>&#123;</tt>和<tt>&#125;</tt>也是标识符。
+第三点，包含任意字符的标识符将可以使用<tt>\</tt>或<tt>|</tt>来使用转义字符的方式打印。
+<tt>\</tt>用来转义单个字符（除了‘x’，因为<tt>\x</tt>用于标记一个十六进制标量值的开始），
+而<tt>|</tt>用来转义从|开始到|结束的中键的字符串组。
+例如<tt>\||\|</tt>是一个有着两个字符的标识符，其由一个字符<tt>|</tt>后跟一个字符<tt>\</tt>组成，而<tt>|hit&nbsp;me!|</tt>则是一个包含着一个空格字符的标识符。
 
 <p>
-���⣬gensyms(page&nbsp;<a href="./objects.html#g56">7.9</a>)��д����<a name="./intro:s2"></a><tt>#&#123;</tt>��<tt>&#125;</tt>�������İ���Ư���Ͷ�һ�޶��������ֵ���ʽ������<tt>#&#123;g1426&nbsp;e5g1c94g642dssw-a&#125;</tt>��
-����Ҳ����ֻ��Ư��������<a name="./intro:s3"></a><tt>#:</tt>��Ϊǰ׺����д������<tt>#:g1426</tt>��
+此外，gensyms(page&nbsp;<a href="./objects.html#g56">7.9</a>)能写成以<a name="./intro:s2"></a><tt>#&#123;</tt>和<tt>&#125;</tt>括起来的包含漂亮和独一无二两个名字的形式，例如<tt>#&#123;g1426&nbsp;e5g1c94g642dssw-a&#125;</tt>。
+它们也可以只用漂亮名字以<a name="./intro:s3"></a><tt>#:</tt>作为前缀来书写，例如<tt>#:g1426</tt>。
 
 <p>
-����2��36�Ļ�������ע�������ƻ�����2��ʮ���ƻ�����10��ʮ�����ƻ�����16������ʹ��ǰ׺<a name="./intro:s4"></a><tt>#<i>n</i>r</tt>�����е�<tt><i>n</i></tt>��ʾ������
-��Сд������Ҫ������д��<tt>#<i>n</i>R</tt>Ҳ���á�
-��10��35���������ô�/Сд��Ӣ����ĸ��ʾ������ʮ��������ô��һ����
-����<tt>#36rZZ</tt>��ʾ35 &times; 36 + 35��Ҳ��1295��
+任意2到36的基数（译注，二进制基数是2、十进制基数是10、十六进制基数是16）可以使用前缀<a name="./intro:s4"></a><tt>#<i>n</i>r</tt>，其中的<tt><i>n</i></tt>表示基数。
+大小写并不重要，所以写成<tt>#<i>n</i>R</tt>也能用。
+从10到35的数字能用大/小写的英文字母表示，就像十六进制那么用一样。
+例如<tt>#36rZZ</tt>表示35 &times; 36 + 35，也即1295。
 
 <p>
-<i>Chez&nbsp;Scheme</i>Ҳ������ʮ���������Ը��������ѧ�������ķ�ʽ��ӡ
-���磬<tt>#o1.4</tt>����<tt>1.5</tt>����<tt>#b1e10</tt>����<tt>4.0</tt>��
-����д��ָ����ǰ�棬����<tt>#x1e20</tt>��ͬ����λʮ��������<tt>7712</tt>.
+<i>Chez&nbsp;Scheme</i>也允许非十进制数字以浮点数或科学计数法的方式打印
+例如，<tt>#o1.4</tt>等于<tt>1.5</tt>，而<tt>#b1e10</tt>等于<tt>4.0</tt>。
+数字写在指数的前面，所以<tt>#x1e20</tt>等同于四位十六进制数<tt>7712</tt>.
 
 <p>
-���˱�׼�������ַ�
+除了标准命名的字符
 <a name="./intro:s5"><tt>#\alarm</tt>,
 <a name="./intro:s6"></a><tt>#\backspace</tt>,
 <a name="./intro:s7"></a><tt>#\delete</tt>,
@@ -127,53 +127,53 @@ book are welcome.
 <a name="./intro:s11"></a><tt>#\page</tt>,
 <a name="./intro:s12"></a><tt>#\return</tt>,
 <a name="./intro:s13"></a><tt>#\space</tt>,
-��
+和
 <a name="./intro:s14"></a><tt>#\tab</tt>,
-<i>Chez&nbsp;Scheme</i>Ҳ��ʶ��
+<i>Chez&nbsp;Scheme</i>也能识别
 <a name="./intro:s15"></a><tt>#\bel</tt>,
 <a name="./intro:s16"></a><tt>#\ls</tt>,
 <a name="./intro:s17"></a><tt>#\nel</tt>,
 <a name="./intro:s18"></a><tt>#\nul</tt>,
 <a name="./intro:s19"></a><tt>#\rubout</tt>,
-��
-<a name="./intro:s20"></a><tt>#\vt</tt> (or <tt>#\vtab</tt>)��
-����ֵС��256���ַ�Ҳ����<tt>#\</tt>Ϊǰ׺���3���˽������İ˽��Ʒ�ʽ��д��
-���磬<tt>#\000</tt>��ͬ��<tt>#\nul</tt>��
+和
+<a name="./intro:s20"></a><tt>#\vt</tt> (or <tt>#\vtab</tt>)。
+标量值小于256的字符也能以<tt>#\</tt>为前缀后跟3个八进制数的八进制方式书写。
+例如，<tt>#\000</tt>等同于<tt>#\nul</tt>。
 
 <p>
-<i>Chez&nbsp;Scheme</i>��fxvectors�����߻���˵��fixnum vectors����д����������(vectors)��ȴ��<tt>#vfx(</tt>Ϊǰ׺������<tt>#(</tt>����ʽ��
-����(Vectors)��bytevectors�Լ�fxvectors������д����һ����ȷ�ĳ���Ϊǰ׺�����ҵ���ȷ�ĳ��ȱ�ָ�����ظ���β��Ԫ�ؿ��Ա���дΪһ����
-���磬<a name="./intro:s21"></a><tt>#(a&nbsp;b&nbsp;c)</tt>��д��<a name="./intro:s22"></a><tt>#3(a&nbsp;b&nbsp;c)</tt>����һ������100��ȫ����������Լ�дΪ<tt>#100(0)</tt>��
+<i>Chez&nbsp;Scheme</i>的fxvectors，或者换种说法fixnum vectors，能写成类似向量(vectors)但却以<tt>#vfx(</tt>为前缀而不是<tt>#(</tt>的形式。
+向量(Vectors)，bytevectors以及fxvectors都可以写成以一个明确的长度为前缀，并且当明确的长度被指定，重复的尾部元素可以被简写为一个。
+例如，<a name="./intro:s21"></a><tt>#(a&nbsp;b&nbsp;c)</tt>能写成<a name="./intro:s22"></a><tt>#3(a&nbsp;b&nbsp;c)</tt>，而一个包含100个全零的向量可以简写为<tt>#100(0)</tt>。
 
 <p>
-<i>Chez&nbsp;Scheme</i>��box��<a name="./intro:s23"></a><tt>#&amp;</tt>Ϊǰ׺������<tt>#&amp;17</tt>��һ������������<tt>17</tt>��box��
+<i>Chez&nbsp;Scheme</i>的box以<a name="./intro:s23"></a><tt>#&amp;</tt>为前缀，例如<tt>#&amp;17</tt>是一个包含整型数<tt>17</tt>的box。
 
 <p>
-Records��д��<a name="./intro:s24"></a><tt>#[<i>type-name</i>&nbsp;<i>field</i>&nbsp;...]</tt>�������﷨��ʽ�����з���<tt><i>type-name</i></tt>��record����������<tt><i>field</i>&nbsp;...</tt>���ʾrecord�ֶε����ݡ�
+Records能写成<a name="./intro:s24"></a><tt>#[<i>type-name</i>&nbsp;<i>field</i>&nbsp;...]</tt>这样的语法形式，其中符号<tt><i>type-name</i></tt>是record的类型名、<tt><i>field</i>&nbsp;...</tt>则表示record字段的内容。
 
 <p>
-������ѭ���ṹ��д��ʹ��ͼ��Ǻ����ǰ׺<a name="./intro:s25"></a><tt>#<i>n</i>=</tt>��<a name="./intro:s26"></a><tt>#<i>n</i>#</tt>����ʽ��
-<tt>#<i>n</i>=</tt>���ڱ������˵�� ��<tt>#<i>n</i>#</tt>���ڱ�Ǳ���עΪ<tt><i>n</i></tt>���
-���磬<tt>'(#1=(a)&nbsp;.&nbsp;#1#)</tt>��һ��car��cdr������ͬһlist��pair����<tt>#0=(a&nbsp;.&nbsp;#0#)</tt>��һ��ѭ��list��Ҳ����˵������cdr����������
+共享和循环结构可写成使用图标记和相关前缀<a name="./intro:s25"></a><tt>#<i>n</i>=</tt>和<a name="./intro:s26"></a><tt>#<i>n</i>#</tt>的形式。
+<tt>#<i>n</i>=</tt>用于标记输入端的项， 而<tt>#<i>n</i>#</tt>用于标记被标注为<tt><i>n</i></tt>的项。
+例如，<tt>'(#1=(a)&nbsp;.&nbsp;#1#)</tt>是一个car和cdr包含着同一list的pair，而<tt>#0=(a&nbsp;.&nbsp;#0#)</tt>是一个循环list，也就是说，它的cdr是它本身。
 
 <p>
-һ��<tt>$primitive</tt> form (���page&nbsp;<a href="./system.html#desc:hash-primitive">336</a>)���ܻ���<tt>quote</tt> formͬ���ķ�ʽ����ʹ��<a name="./intro:s27"></a><tt>#%</tt>Ϊǰ׺����Ϊ��д��
-���磬
-<tt>#%car</tt>��ͬ��<tt>($primitive&nbsp;car)</tt>��
-<tt>#2%car</tt>��ͬ��<tt>($primitive&nbsp;2&nbsp;car)</tt>��
-<tt>#3%car</tt>��ͬ��<tt>($primitive&nbsp;3&nbsp;car)</tt>��
+一个<tt>$primitive</tt> form (详见page&nbsp;<a href="./system.html#desc:hash-primitive">336</a>)可能会以<tt>quote</tt> form同样的方式，即使用<a name="./intro:s27"></a><tt>#%</tt>为前缀，作为缩写。
+例如，
+<tt>#%car</tt>等同于<tt>($primitive&nbsp;car)</tt>，
+<tt>#2%car</tt>等同于<tt>($primitive&nbsp;2&nbsp;car)</tt>，
+<tt>#3%car</tt>等同于<tt>($primitive&nbsp;3&nbsp;car)</tt>，
 
 <p>
-<i>Chez&nbsp;Scheme</i>��end-of-file����д��<tt>#!eof</tt>��
-���end-of-file����������κ������˵��ļ��������ⲿ��//If the end-of-file object appears outside of any datum within a file
-being loaded����<tt>load</tt>��������Ϊһ���������ļ���β��ֹͣ�����λ�õ����롣
-��һ���ļ����м����<tt>#!eof</tt>���Է���ظ���load-time����
+<i>Chez&nbsp;Scheme</i>的end-of-file对象写作<tt>#!eof</tt>。
+如果end-of-file对象出现在任何载入了的文件的数据外部（//If the end-of-file object appears outside of any datum within a file
+being loaded），<tt>load</tt>将把它视为一个真正的文件结尾并停止在这个位置的载入。
+在一个文件的中间插入<tt>#!eof</tt>可以方便地跟踪load-time错误。
 
 <p>
-weak pairs�е�Broken pointers(���page&nbsp;<a href="./smgmt.html#desc:weak-cons">381</a>)����ʾΪ<i>broken weak pointer</i>����д��<tt>#!bwp</tt>��
+weak pairs中的Broken pointers(详见page&nbsp;<a href="./smgmt.html#desc:weak-cons">381</a>)被表示为<i>broken weak pointer</i>对象，写作<tt>#!bwp</tt>。
 
 <p>
-���˱�׼�ķָ���(�ո�����С���ţ����������ţ�˫���ţ��ֺţ��Լ�<tt>#</tt>), <i>Chez&nbsp;Scheme</i>Ҳ��������Ϊ�ָ��������Ҵ����ţ������ţ������ţ����š�
+除了标准的分隔符(空格，左右小括号，左右中括号，双引号，分号，以及<tt>#</tt>), <i>Chez&nbsp;Scheme</i>也将以下作为分隔符：左右大括号，单引号，反引号，逗号。
 
 <p>
 The <i>Chez&nbsp;Scheme</i> lexical extensions described above are disabled in an
