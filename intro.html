@@ -157,32 +157,23 @@ Records能写成<a name="./intro:s24"></a><tt>#[<i>type-name</i>&nbsp;<i>field</i>&
 例如，<tt>'(#1=(a)&nbsp;.&nbsp;#1#)</tt>是一个car和cdr包含着同一list的pair，而<tt>#0=(a&nbsp;.&nbsp;#0#)</tt>是一个循环list，也就是说，它的cdr是它本身。
 
 <p>
-一个<tt>$primitive</tt> form (see page&nbsp;<a href="./system.html#desc:hash-primitive">336</a>) may
-be abbreviated in the same manner as a <tt>quote</tt> form, using the 
-<a name="./intro:s27"></a><tt>#%</tt> prefix.
-For example,
-<tt>#%car</tt> is equivalent to <tt>($primitive&nbsp;car)</tt>,
-<tt>#2%car</tt> to <tt>($primitive&nbsp;2&nbsp;car)</tt>, and
-<tt>#3%car</tt> to <tt>($primitive&nbsp;3&nbsp;car)</tt>.
+一个<tt>$primitive</tt> form (详见page&nbsp;<a href="./system.html#desc:hash-primitive">336</a>)可能会以<tt>quote</tt> form同样的方式，即使用<a name="./intro:s27"></a><tt>#%</tt>为前缀，作为缩写。
+例如，
+<tt>#%car</tt>等同于<tt>($primitive&nbsp;car)</tt>，
+<tt>#2%car</tt>等同于<tt>($primitive&nbsp;2&nbsp;car)</tt>，
+<tt>#3%car</tt>等同于<tt>($primitive&nbsp;3&nbsp;car)</tt>，
 
 <p>
-<i>Chez&nbsp;Scheme</i>'s end-of-file object is printed <tt>#!eof</tt>.
-If the end-of-file object appears outside of any datum within a file
-being loaded, <tt>load</tt> will treat it as if it were a true
-end of file and stop loading at that point.
-Inserting <tt>#!eof</tt> into the middle of a file can thus be handy
-when tracking down a load-time error.
+<i>Chez&nbsp;Scheme</i>的end-of-file对象写作<tt>#!eof</tt>。
+如果end-of-file对象出现在任何载入了的文件的数据外部（//If the end-of-file object appears outside of any datum within a file
+being loaded），<tt>load</tt>将把它视为一个真正的文件结尾并停止在这个位置的载入。
+在一个文件的中间插入<tt>#!eof</tt>可以方便地跟踪load-time错误。
 
 <p>
-Broken pointers in weak pairs (see page&nbsp;<a href="./smgmt.html#desc:weak-cons">381</a>) are
-represented by the <i>broken weak pointer</i> object, which is
-printed <tt>#!bwp</tt>.
+weak pairs中的Broken pointers(详见page&nbsp;<a href="./smgmt.html#desc:weak-cons">381</a>)被表示为<i>broken weak pointer</i>对象，写作<tt>#!bwp</tt>。
 
 <p>
-In addition to the standard delimiters (whitespace, open and close
-parentheses, open and close brackets, double quotes, semi-colon,
-and <tt>#</tt>), <i>Chez&nbsp;Scheme</i> also treats as delimiters
-open and close braces, single quote, backward quote, and comma.
+除了标准的分隔符(空格，左右小括号，左右中括号，双引号，分号，以及<tt>#</tt>), <i>Chez&nbsp;Scheme</i>也将以下作为分隔符：左右大括号，单引号，反引号，逗号。
 
 <p>
 The <i>Chez&nbsp;Scheme</i> lexical extensions described above are disabled in an

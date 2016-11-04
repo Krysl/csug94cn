@@ -4,63 +4,41 @@
 
 <html>
 <head>
-<title>Using Chez Scheme</title>
+<title>使用Chez Scheme</title>
 <link href="csug.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <a name="g5"></a>
 <a name="./use:h0"></a>
 
-<h1>Chapter 2. Using Chez Scheme<a name="CHPTUSE"></a></h1>
+<h1>Chapter 2. 使用Chez Scheme<a name="CHPTUSE"></a></h1>
 
 
 
 
 
 <p>
-<i>Chez&nbsp;Scheme</i> is often used interactively to support program development
-and debugging, yet it may also be used to create stand-alone applications
-with no interactive component.
-This chapter describes the various ways in which <i>Chez&nbsp;Scheme</i> is
-typically used and, more generally, how to get the most out of the
-system.
+<i>Chez&nbsp;Scheme</i>常使用交互界面来支持程序开发和调试，然而它也能用于创建没有交互元素的独立应用。
+本章描述了<i>Chez&nbsp;Scheme</i>的各种典型用法，或者说更普遍地，如何充分利用该系统。
 Sections&nbsp;<a href="./use.html#g6">2.1</a>, <a href="./use.html#g7">2.2</a>,
-and&nbsp;<a href="./use.html#g8">2.3</a> describe how
-one uses <i>Chez&nbsp;Scheme</i> interactively.
-Section&nbsp;<a href="./use.html#g9">2.4</a> discusses how libraries and RNRS
-top-level programs are used in <i>Chez&nbsp;Scheme</i>.
-Section&nbsp;<a href="./use.html#g10">2.5</a> covers support for writing and running
-Scheme scripts, including compiled scripts and compiled
-RNRS top-level programs.
-Section&nbsp;<a href="./use.html#g11">2.6</a> describes how to structure
-and compile an application to get the most efficient code possible out
-of the compiler.
-Section&nbsp;<a href="./use.html#g12">2.7</a> describes how one can customize the
-startup process, e.g., to alter or eliminate the command-line options,
-to preload Scheme or foreign code, or to run <i>Chez&nbsp;Scheme</i> as a subordinate
-program of another program.
-Section&nbsp;<a href="./use.html#g13">2.8</a> describes how to build applications
-using <i>Chez&nbsp;Scheme</i> with <i>Petite&nbsp;Chez&nbsp;Scheme</i> for run-time support.
-Finally, Section&nbsp;<a href="./use.html#g14">2.9</a> covers command-line options used when
-invoking <i>Chez&nbsp;Scheme</i>.
+和&nbsp;<a href="./use.html#g8">2.3</a>描述了如何以交互式的方式使用<i>Chez&nbsp;Scheme</i>。
+Section&nbsp;<a href="./use.html#g9">2.4</a>讨论了如何在<i>Chez&nbsp;Scheme</i>中使用库和RNRS顶级程序。
+Section&nbsp;<a href="./use.html#g10">2.5</a>涵盖了书写与运行Scheme脚本，包括编译脚本、编译RNRS顶级程序。
+Section&nbsp;<a href="./use.html#g11">2.6</a>描述了如何构造和编译一个程序以求编译出最高效的代码。
+Section&nbsp;<a href="./use.html#g12">2.7</a>描述了如何自定义启动过程，例如，改变或消除命令行选项、预加载Scheme或其他语言代码、或以其他程序子程序的方式运行<i>Chez&nbsp;Scheme</i>。
+Section&nbsp;<a href="./use.html#g13">2.8</a>描述了如何使用<i>Petite&nbsp;Chez&nbsp;Scheme</i>建造<i>Chez&nbsp;Scheme</i>应用程序以获得运行时支持。
+最后，Section&nbsp;<a href="./use.html#g14">2.9</a>涵盖了调用<i>Chez&nbsp;Scheme</i>时所能使用的命令行选项。
 
 <p>
 
-<h3><a name="g6"></a><a name="./use:h1"></a>Section 2.1. Interacting with Chez Scheme<a name="SECTUSEINTERACTION"></a></h3>
+<h3><a name="g6"></a><a name="./use:h1"></a>Section 2.1. 与Chez Scheme交互<a name="SECTUSEINTERACTION"></a></h3>
 
 
 
 <p>
-One of the simplest and most effective ways to write and test Scheme
-programs is to compose them using a text editor, like <tt>vi</tt> or
-<tt>emacs</tt>, and test them interactively with <i>Chez&nbsp;Scheme</i> running in
-a shell window.
-When <i>Chez&nbsp;Scheme</i> is installed with default options, entering the command
-<tt>scheme</tt> at the shell's prompt starts an interactive Scheme
-session.
-The command <tt>petite</tt> does the same for <i>Petite&nbsp;Chez&nbsp;Scheme</i>.
-After entering this command, you should see a short greeting followed
-by an angle-bracket on a line by itself, like this:
+最简单最高效的编写测试Scheme程序的方式之一是使用<tt>vi</tt>或<tt>emacs</tt>之类的文本编辑器来编写，然后在shell窗口中运行的<i>Chez&nbsp;Scheme</i>中交互式地测试它们。
+当<i>Chez&nbsp;Scheme</i>以默认选项被安装好后，在shell的提示符后输入命令<tt>scheme</tt>以启动一个交互式Scheme会话。类似的，命令<tt>petite</tt>则是用于启动<i>Petite&nbsp;Chez&nbsp;Scheme</i>的交互式会话。
+在输入这条命令后，你可以看到一段简短的后跟一个行首带着尖括号的新行的问候，就像这样：
 
 <p>
 
@@ -70,19 +48,15 @@ Copyright&nbsp;1984-2016&nbsp;Cisco&nbsp;Systems,&nbsp;Inc.&nbsp;
 <br>
 <br>
 &gt;&nbsp;</tt>
-<p>You also should see that the cursor is sitting one space to the
-right of the angle-bracket.
-The angle-bracket is a prompt issued by the system's "REPL,"
-which stands for "Read Eval Print Loop," so called because it
-reads, evaluates, and prints an expression, then loops back to
-read, evaluate, and print the next, and so on.
-(In <i>Chez&nbsp;Scheme</i>, the REPL is also called a waiter.)
+<p>你应该能看到，光标位于尖括号偏右一个空格的位置。
+尖括号是系统的"REPL"的提示符，"REPL"是"Read Eval Print Loop"的缩写，意味读、求值、打印一个表达式，然后从头开始继续读、求值、打印的过程，就这么不断重复。
+
+(在<i>Chez&nbsp;Scheme</i>中，REPL也叫做waiter。)
 
 <p>
-In response to the prompt, you can type any Scheme expression.
-If the expression is well-formed, the REPL will run the expression
-and print the value.
-Here are a few examples:
+你可以输入一些Scheme表达式以回应提示符。
+如果表达式正确，那么REPL会运行表达式，然后打印它的值。
+以下是一些例子：
 
 <p>
 
